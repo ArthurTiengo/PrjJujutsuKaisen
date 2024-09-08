@@ -1,0 +1,291 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    @import: url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
+    font-family: "Nerko One", cursive;
+
+}
+
+
+
+
+.btn-menu {
+    display: none;
+    color: white;
+}
+
+.logo {
+    padding-left: 2%;
+}
+
+.mobile {
+    display: none;
+}
+
+body {
+    background-color: #732944;
+}
+
+header {
+    width: 100%;
+    pad: 28px 8%;
+}
+
+body {
+    background-image: linear-gradient(to bottom,
+            rgba(194, 194, 194, 0.2) 0%,
+            rgba(51, 51, 51, 0.5) 30%,
+            rgba(57, 58, 58, 0.7) 40%,
+            #732944 100%), url('./imgs/bannertopo.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #d91e2ed9;
+    box-shadow: 0px 3px 15px;
+    position: relative;
+}
+
+.lista {
+    display: flex;
+    list-style: none;
+    gap: 66px;
+    padding-right: 2%;
+}
+
+
+.item a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    display: block;
+    transition: 0.5s;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    display: block;
+    transition: 0.5s;
+}
+
+a:hover {
+    border: 2px solid #F28F79;
+    padding: 8px;
+
+}
+
+.item:active a {
+    color: #1d1d1d;
+    border-bottom: 3px solid #F28F79;
+    transition: 0.5s;
+}
+
+/*CARROSSEL*/
+
+.slider {
+    margin: 0 auto;
+    width: 1050px;
+    height: 600px;
+    overflow: hidden;
+
+    margin-top: 40vh;
+    border-radius: 40px;
+    box-shadow: 2px 2px 10px;
+}
+
+.slides {
+    width: 400%;
+    height: 600px;
+    display: flex;
+}
+
+.slides input {
+    display: none;
+}
+
+.slide {
+    width: 25%;
+    position: relative;
+    transition: 2s;
+}
+
+.imagem-carrossel {
+    width: 1050px;
+    height: 600px;
+    filter: grayscale(50%);
+}
+
+.manual-navigation {
+    position: absolute;
+    width: 1050px;
+    margin-top: -38px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn {
+    border: 2px solid #732944;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.9s;
+}
+
+.manual-btn:not(:last-child) {
+    margin-right: 30px;
+}
+
+.manual-btn:hover {
+    background-color: #193559;
+}
+
+#radio1:checked~.first {
+    margin-left: 0;
+}
+
+#radio2:checked~.first {
+    margin-left: -25%;
+}
+
+#radio3:checked~.first {
+    margin-left: -50%;
+}
+
+#radio4:checked~.first {
+    margin-left: -75%;
+}
+
+.navigation-auto div {
+    border: 2px solid #3DBFF2;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.navigation-auto {
+    position: absolute;
+    width: 1050px;
+    margin-top: 562px;
+    display: flex;
+    justify-content: center;
+}
+
+.navigation-auto div:not(:last-child) {
+    margin-right: 30px;
+}
+
+#radio1:checked~.navigation-auto .auto-btn1 {
+    background-color: #D91E2E;
+}
+
+#radio2:checked~.navigation-auto .auto-btn2 {
+    background-color: #D91E2E;
+}
+
+#radio3:checked~.navigation-auto .auto-btn3 {
+    background-color: #D91E2E;
+}
+
+#radio4:checked~.navigation-auto .auto-btn4 {
+    background-color: #D91E2E;
+}
+
+/*MEIO DA PAGINA*/
+
+.criador {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 35px 0;
+    gap: 15px;
+}
+
+p {
+    font-size: 15px;
+    color: #F28F79;
+    text-shadow: 0px 3px 15px black;
+}
+
+h2{
+    font-size: 50px;
+    color: #D91A3D;
+    text-shadow: 0px 3px 15px black;
+}
+
+h3{
+    color:#4E6BA6 ;
+    text-shadow: 0px 3px 15px black;
+}
+
+.gege{
+    border-radius: 15px;
+    box-shadow: 0px 3px 15px;
+    filter: grayscale(50%);
+}
+
+
+/*RESPONSIVO*/
+@media screen and (max-width:1024px) {
+    .lista {
+        display: none;
+    }
+
+    .btn-menu {
+        display: block;
+        background-color: transparent;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    .mobile.active {
+        display: block;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .lista-mobile {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin: 12px 0px;
+    }
+
+    .lista-mobile .item {
+        list-style: none;
+        text-align: center;
+    }
+
+    .slider {
+        width: 700px;
+        height: 400px;
+    }
+
+    .navigation-auto {
+        position: absolute;
+        width: 700px;
+        margin-top: 362px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .manual-navigation {
+        position: absolute;
+        width: 700px;
+        margin-top: -138px;
+        display: flex;
+        justify-content: center;
+    }
+
+}
